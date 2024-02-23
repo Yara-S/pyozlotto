@@ -1,0 +1,23 @@
+
+
+<html>
+    <body>
+        <img src="https://assets.nicepagecdn.com/5b806fde/6052434/images/2454282.png" alt="" data-original-src="https://assets.nicepagecdn.com/5b806fde/6052434/images/2454282.png" data-color="#000000">
+
+        <form method = "GET"> 
+            {{ form }} 
+            <input type = "submit" value = "Submit"> 
+        </form> 
+
+        <table>
+            <tr>
+            {% for number, count in results.items %} 
+                    <td> <h1>{{number}}</h1>  <h2>{{count}}</h2></td>
+            {% endfor %} 
+            </tr>
+        </table>
+
+
+
+    </body>
+</html>
