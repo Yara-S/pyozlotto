@@ -1,21 +1,26 @@
 
 
 <html>
+    {% load static %}
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
     <body>
+        <div class="testando">Testing css</div>
         <img src="https://assets.nicepagecdn.com/5b806fde/6052434/images/2454282.png" alt="" data-original-src="https://assets.nicepagecdn.com/5b806fde/6052434/images/2454282.png" data-color="#000000">
 
         <form method = "GET"> 
             {{ form }} 
             <input type = "submit" value = "Submit"> 
         </form> 
-
-        <table>
-            <tr>
+    
+        <div class="numberGrad">
             {% for number, count in results.items %} 
-                    <td> <h1>{{number}}</h1>  <h2>{{count}}</h2></td>
+                    <div class="numberCell"> 
+                        <a>{{number}}</a>
+                        <span class="tooltiptext">{{count}}</span>
+                    </div>
             {% endfor %} 
-            </tr>
-        </table>
+        </div>
 
 
 

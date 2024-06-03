@@ -30,5 +30,7 @@ def trial(request):
         response = DrawResults().get_results(games=list(games.keys())[1:], days_ago=selected_time)
     else:
         response = DrawResults().get_results([selected_game], days_ago=selected_time)
+
+    print(response)
     
     return render(request, "initial.html", {"form": my_form, "results": response})

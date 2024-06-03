@@ -29,7 +29,7 @@ class DrawResults(models.Model):
                         continue
                 winninig_numbers = result['winning_numbers_display'].replace(" ", "").split(",")
                 self.numbers = self.numbers + winninig_numbers
-        return dict(Counter(self.numbers))
+        return dict(Counter(self.numbers).most_common())
 
     def get_games(self):
         self.games[0] = "All games"
